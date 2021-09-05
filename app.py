@@ -16,7 +16,7 @@ def impressum():  # put application's code here
 
 def main():
     app.config["SECRET_KEY"] = token_urlsafe(16)
-    app.run(debug=True, use_reloader=True, port=80)
+    app.run(debug=True, use_reloader=True, port=5000)
 
 
 if __name__ == '__main__':
