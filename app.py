@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def eaglegang():
     joke = _joke_reader()
-    return render_template("eaglegang.html", joke = joke)
+    return render_template("eaglegang.html", joke=joke)
 
 
 def _joke_reader():
@@ -26,7 +26,7 @@ def impressum():  # put application's code here
 def main():
     print("Started App")
     app.config["SECRET_KEY"] = token_urlsafe(16)
-    app.run(debug=False, use_reloader=False, port=5000)
+    app.run(debug=False, use_reloader=False, port=5000, host="0.0.0.0")
 
 
 if __name__ == '__main__':
