@@ -2,8 +2,8 @@
 
     <nav class="navbar navbar-dark navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand text-light" href="eaglegang.html">
-                <img src="fidget%20spinner.gif" alt="" width="15%" class="d-inline-block align-text-top">
+            <a class="navbar-brand text-light" href="{{ url_for('eaglegang') }}">
+                <img src="{{ url_for('static', filename='img/fidget_spinner.gif') }}" alt="" width="15%" class="d-inline-block align-text-top">
                 Eaglegang
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,10 +12,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="eaglegang.html">Home</a>
+                        <a class="nav-link {%if request.path == url_for('eaglegang')%}active{%endif%}" href="{{ url_for('eaglegang') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="impressum.html">Impressum</a>
+                        <a class="nav-link {%if request.path == url_for('impressum')%}active{%endif%}" href="{{ url_for('impressum') }}">Impressum</a>
                     </li>
                 </ul>
             </div>
