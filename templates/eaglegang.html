@@ -1,0 +1,195 @@
+{% include "elements/header.html" %}
+{% include "elements/navbar.html" %}
+
+    <div class="px-3 py-3">
+        <div class="p-5 mb-4 bg-primary rounded-3 overlay" style="background-image: url({{ url_for('static', filename='img/Money3.png') }}); background-filter: blur(50px);">
+            <div class="container-fluid py-5" >
+                <div class="fw-bold">
+                    <h1 class="display-1 text-danger text-end">
+                        Willkommen auf dem Eaglegang Dashboard
+                    </h1>
+                    <span class="badge bg-info">v0.1</span> 
+                    <span class="badge bg-success">NEW!</span>
+                    <span class="badge bg-warning">BETA</span>
+
+                </div>
+
+            </div>
+            <form method="get" action="https://www.ecosia.org/search">
+                <div class="input-group mb-3 container-sm">
+                    <input type="text" class="form-control" name="q" placeholder="Ecosia Suche auf nachhaltigbasis." aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-success" type="submit" id="button-addon2">Search</button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="row row-cols-xxl-6 row-cols-xl-5 row-cols-lg-4 row-cols-md-2 row-col-sm-1">
+            <div class="py-2 px-2">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='img/Money2.png') }}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Respektschellenverteilungs-Gesetz</h5>
+                        <p class="card-text">Hier kann das ResVG eingesehen werden.</p> 
+                    </div>
+                    <div class="card-footer bg-transparent border-success"><a href="https://niggipi.duckdns.org/s/9x3WDq9SXDQ4kLS" class="btn btn-primary">Ansehen</a></div>
+                </div>
+            </div>
+            <div class="py-2 px-2">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='img/Cards.jpg') }}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Kings Cup-Regeln</h5>
+                        <p class="card-text">Na? Hast du wieder vergessen, was man machen muss, wenn man den Buben gezogen hat?</p>
+                    </div>
+                    
+                    <div class="card-footer bg-transparent border-success">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#KingsCup">
+                        Noch mal nachlesen...
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="KingsCup" tabindex="-1" aria-labelledby="KingsCup" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Regeln</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5>Mit Canasta-Blatt</h5>
+                                        <dl class="row">
+                                            <dt class="col-sm-3">2</dt>
+                                            <dd class="col-sm-9">Linker Nachbar muss 2 Schlücke trinken.</dd>
+
+                                            <dt class="col-sm-3">3</dt>
+                                            <dd class="col-sm-9">Selbst 3 Schlücke trinken.</dd>
+                                            
+                                            <dt class="col-sm-3">4</dt>
+                                            <dd class="col-sm-9">Das andere Geschlecht trinkt.</dd>
+                                            
+                                            <dt class="col-sm-3">5</dt>
+                                            <dd class="col-sm-9">Du darfst ein Wort verbieten.</dd>
+                                            
+                                            <dt class="col-sm-3">6</dt>
+                                            <dd class="col-sm-9">Es wird Reihum gezählt. Anstatt der Zahlen, die 6 enthalten oder durch 6 teilbar sind (6, 12, 16, 18, ...) muss etwas anderes gesagt werden. Schnapszahlen (11, 22, 33) sind ebenfalls verboten.</dd>
+                                            
+                                            <dt class="col-sm-3">7</dt>
+                                            <dd class="col-sm-9">Verteile 7 Schlücke.</dd>
+                                            
+                                            <dt class="col-sm-3">8</dt>
+                                            <dd class="col-sm-9">Wähle deinen Trinkbuddy.</dd>
+                                            
+                                            <dt class="col-sm-3">9</dt>
+                                            <dd class="col-sm-9">Nenne ein Wort, die anderen müssen darauf reimen.</dd>
+                                            
+                                            <dt class="col-sm-3">10</dt>
+                                            <dd class="col-sm-9">Wähle eine Kategorie, zu der jeder was sagen muss.</dd>
+                                            
+                                            <dt class="col-sm-3">Bube</dt>
+                                            <dd class="col-sm-9">Denk dir eine Regel aus.</dd>
+                                            
+                                            <dt class="col-sm-3">Dame</dt>
+                                            <dd class="col-sm-9">Stell deinen Mitspielern Fragen, wer antwortet muss trinken.</dd>
+                                            
+                                            <dt class="col-sm-3">König</dt>
+                                            <dd class="col-sm-9">Fülle etwas in das Glas, was in der Mitte steht. Der letzte, der den König zieht, muss das Glas leer trinken.</dd>
+                                            
+                                            <dt class="col-sm-3">Ass</dt>
+                                            <dd class="col-sm-9">Jeder trinkt. Erst wenn die erste Person wieder mit dem Trinken aufhört, darf auch die zweite Person das Glas wieder absetzen. So geht’s immer weiter, bis die letzte Person im Uhrzeigersinn das Glas abgesetzt hat.</dd>
+                                        </dl>
+
+                                        <h5>Mit Skat-Blatt</h5>
+                                        <dl class="row">
+                                            <dt class="col-sm-3">7</dt>
+                                            <dd class="col-sm-9">Verteile 7 Schlücke.</dd>
+                                            
+                                            <dt class="col-sm-3">8</dt>
+                                            <dd class="col-sm-9">Wähle deinen Trinkbuddy.</dd>
+                                            
+                                            <dt class="col-sm-3">9</dt>
+                                            <dd class="col-sm-9">Nenne ein Wort, die anderen müssen darauf reimen.</dd>
+                                            
+                                            <dt class="col-sm-3">10</dt>
+                                            <dd class="col-sm-9">Wähle eine Kategorie, zu der jeder was sagen muss.</dd>
+                                            
+                                            <dt class="col-sm-3">Bube</dt>
+                                            <dd class="col-sm-9">Denk dir eine Regel aus.</dd>
+                                            
+                                            <dt class="col-sm-3">Dame</dt>
+                                            <dd class="col-sm-9">Stell deinen Mitspielern Fragen, wer antwortet muss trinken.</dd>
+                                            
+                                            <dt class="col-sm-3">König</dt>
+                                            <dd class="col-sm-9">Fülle etwas in das Glas, was in der Mitte steht. Der letzte, der den König zieht, muss das Glas leer trinken.</dd>
+                                            
+                                            <dt class="col-sm-3">Ass</dt>
+                                            <dd class="col-sm-9">Jeder trinkt. Erst wenn die erste Person wieder mit dem Trinken aufhört, darf auch die zweite Person das Glas wieder absetzen. So geht’s immer weiter, bis die letzte Person im Uhrzeigersinn das Glas abgesetzt hat.</dd>
+                                        </dl>
+
+                                        <h5>Alternative Zusatzregeln</h5>
+                                        <ol>
+                                            <li>Wird der Ring unterbrochen, muss das eigene Getränk geext werden.</li>
+                                            <li>Es darf nicht „du“ gesagt werden.</li>
+                                            <li>Es darf nicht „trinken“ gesagt werden.</li>
+                                            <li>Es darf auf niemanden gezeigt werden.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Danke!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="py-2 px-2">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='img/discord.jfif') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Eaglegang Discord</h5>
+                        <p class="card-text">Trete jetzt dem Eaglegang Discord bei.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-success"><a href="https://discord.gg/EpnJHuppYt" class="btn btn-primary">Lets go!</a></div>
+                </div>
+            </div>
+            
+            <div class="py-2 px-2">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='img/sprachnachricht.jpg') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Sprachnachrichten-Archiv</h5>
+                        <p class="card-text">Coming soon!</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-success"><a href="#" class="btn btn-secondary">Jetzt anhören</a></div>
+                </div>
+            </div>
+            
+            <div class="py-2 px-2">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='img/Money.png') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Gute Musik</h5>
+                        <p class="card-text">Jetzt den neuesten Banger von Money Boy hören!</p>
+                        <iframe width="200" src="https://www.youtube-nocookie.com/embed/5pmX-GN5AXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="card-footer bg-transparent border-success"><a href="https://www.youtube.com/channel/UClQIxKKIQskL_CsHlXQ1_uw" class="btn btn-primary">Zum Kanal von YSL</a></div>
+                </div>
+            </div>
+
+            <div class="py-2 px-2">
+                <div class="card h-100">
+                    <img src="{{ url_for('static', filename='img/code.jpg') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Feature Requests</h5>
+                        <p class="card-text">Bug gefunden? Funktion fehlt? Erstelle ein Ticket auf Github!</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-success"><a href="" class="btn btn-primary">Ab zu Github!</a></div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    {% include "elements/footer.html" %}
