@@ -32,7 +32,7 @@ def update_clickbait():
     if "[place]" in headline:
         places = open("clickbait/places.data", "r", encoding="utf-8").read().splitlines()
         place = choice(places)
-        headline = headline.replace("[object]", place)
+        headline = headline.replace("[place]", place)
     if "[number]" in headline:
         number = randint(1, 100)
         headline = headline.replace("[number]", str(number))
