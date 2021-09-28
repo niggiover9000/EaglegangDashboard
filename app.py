@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from secrets import token_urlsafe
+from os import listdir
 
 
 app = Flask(__name__)
@@ -9,7 +10,8 @@ app = Flask(__name__)
 def eaglegang():
     joke = _joke_reader()
     clickbait = _clickbait_reader()
-    return render_template("eaglegang.html", joke=joke, clickbait=clickbait)
+    emotes = listdir("static/img/moneyboy_emotes")
+    return render_template("eaglegang.html", joke=joke, clickbait=clickbait, emotes=emotes)
 
 
 def _joke_reader():

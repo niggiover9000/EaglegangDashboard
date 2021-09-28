@@ -9,8 +9,7 @@
                         Willkommen auf dem Eaglegang-Dashboard!
                     </h1>
                     <div class="text-end">
-                        <span class="badge bg-info">v0.1</span>
-                        <span class="badge bg-success">NEW!</span>
+                        <span class="badge bg-info">v0.3</span>
                         <span class="badge bg-warning">BETA</span>
                     </div>
 
@@ -181,7 +180,37 @@
                     <div class="card-footer bg-transparent border-success"><a href="#" class="btn btn-secondary">Jetzt anhören</a></div>
                 </div>
             </div>
-            
+
+            <div class="py-2 px-2">
+                <div class="card h-100">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="{{ url_for('static', filename='img/Money.png') }}" class="d-block w-100" alt="...">
+                            </div>
+                            {% for files in emotes %}
+                            <div class="carousel-item">
+                                <img src="/static/img/moneyboy_emotes/{{files}}" class="d-block w-100" alt="...">
+                            </div>
+                            {% endfor %}
+
+
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                    <div class="card-footer bg-transparent border-success">
+                        <a href="{{ url_for('static', filename='img/moneyboy_emotes.zip') }}" class="btn btn-primary">Alle herunterladen.</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="py-2 px-2">
                 <div class="card h-100">
                     <img src="{{ url_for('static', filename='img/Money.png') }}" class="card-img-top" alt="...">
