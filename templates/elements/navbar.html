@@ -4,7 +4,7 @@
         <div class="container-fluid">
             <a class="navbar-brand text-light" href="{{ url_for('eaglegang') }}">
                 <img src="https://i.makeagif.com/media/11-13-2017/bVTzsy.gif" alt="" width="15%" class="d-inline-block align-text-top">
-                Eaglegang
+                Das Dashboard
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -16,6 +16,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {%if request.path == url_for('impressum')%}active{%endif%}" href="{{ url_for('impressum') }}">Impressum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {%if request.path == url_for('sprachnachrichten')%}active{%endif%}" href="{{ url_for('sprachnachrichten') }}">Sprachnachrichten</a>
                     </li>
                 </ul>
             </div>
