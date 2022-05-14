@@ -33,6 +33,11 @@ def impressum():  # put application's code here
     return render_template("impressum.html")
 
 
+@app.route('/sprachnachrichten')
+def sprachnachrichten():  # put application's code here
+    return render_template("sprachnachrichten.html")
+
+
 def main(port=5000):
     print("Started App")
     app.config["SECRET_KEY"] = token_urlsafe(16)
